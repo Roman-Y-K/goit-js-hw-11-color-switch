@@ -1,0 +1,1 @@
+.button-container{display:inline-block;margin-top:50px;margin-left:650px}button{font-size:40px;background-color:#000;color:red;border-color:red}button:not(:last-child){margin-right:10px}
