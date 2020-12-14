@@ -23,17 +23,20 @@ function onChangeColorBody() {
     
     intervalId =  setInterval(getColor, 1000);
     onStart = true;
+    startBtnRef.setAttribute('disabled', 'disabled');
+    
 
 };
 
 function offChangeColorBody() {
     clearInterval(intervalId);
     onStart = false;
+    startBtnRef.removeAttribute('disabled');
 }
 
 
 function getColor() {
-    let value = randomIntegerFromInterval(1, 5);
+    let value = randomIntegerFromInterval(1, colors.length - 1);
     let bodyColor = colors[value];
    
     bodyRef.style.backgroundColor = bodyColor;
